@@ -41,6 +41,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2I50O4Hy1VwIpQGI4Iujn1sd"></script>
 
 	</head>
 	<body>
@@ -88,20 +89,48 @@
 				<!--</div>-->
 			<!--</div>-->
 			<div class="row" style="margin-bottom: 70px;">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-5 col-md-pull-1 animate-box">
-						<img src="images/project-7.jpg" style="height: 300px; width: 100%;">
-					</div>
-					<div class="col-md-7 animate-box">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="animate-box">
 						<h2>Say Hello</h2>
 						<h3>Free html5 templates Made by <a href="#" target="_blank">freehtml5.co</a></h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 					</div>
+
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-5 col-md-pull-1 animate-box">
+				<div class="col-md-10 col-md-offset-1">
+					<!--<div class="col-md-7 animate-box">-->
+						<!--<h3>Get In Touch</h3>-->
+						<!--<form action="#">-->
+							<!--<div class="row form-group">-->
+								<!--<div class="col-md-12">-->
+									<!--<label for="fname">Your Name</label>-->
+									<!--<input type="text" id="fname" class="form-control">-->
+								<!--</div>-->
+								<!---->
+							<!--</div>-->
+
+							<!--<div class="row form-group">-->
+								<!--<div class="col-md-12">-->
+									<!--<label for="email">Email</label>-->
+									<!--<input type="text" id="email" class="form-control">-->
+								<!--</div>-->
+							<!--</div>-->
+
+							<!--<div class="row form-group">-->
+								<!--<div class="col-md-12">-->
+									<!--<label for="message">Message</label>-->
+									<!--<textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="form-group">-->
+								<!--<input type="submit" value="Send Message" class="btn btn-primary">-->
+							<!--</div>-->
+
+						<!--</form>		-->
+					<!--</div>-->
+					<div class="col-md-5 animate-box">
 						<div class="fh5co-contact-info">
 							<h3>Contact Information</h3>
 							<ul>
@@ -113,34 +142,8 @@
 						</div>
 					</div>
 					<div class="col-md-7 animate-box">
-						<h3>Get In Touch</h3>
-						<form action="#">
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label for="fname">Your Name</label>
-									<input type="text" id="fname" class="form-control">
-								</div>
-								
-							</div>
+						<div id="allmap" style="width: 100%; height: 300px;"></div>
 
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label for="email">Email</label>
-									<input type="text" id="email" class="form-control">
-								</div>
-							</div>
-
-							<div class="row form-group">
-								<div class="col-md-12">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
-							</div>
-
-						</form>		
 					</div>
 				</div>
 			</div>
@@ -184,6 +187,15 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(112.16, 34.32), 11);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		map.setCurrentCity("洛阳");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	</script>
 
 	</body>
 </html>
