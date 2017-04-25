@@ -1,0 +1,61 @@
+<div>
+	<style>
+		.product-detail {
+
+		}
+		.product-detail span {
+			display: inline-block;
+			size: 15px;
+			font-weight: normal;
+			color: black;
+		}
+	</style>
+		<div class="fh5co-loader"></div>
+
+		<div id="page">
+
+			<div id="fh5co-author">
+				<div class="container">
+					<div class="row top-line animate-box">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="author-inner animate-box col-md-6">
+								<img ng-src="{{product.show_picture}}" style="height: 300px; width: 100%;" id="pro_image">
+							</div>
+							<div class="col-md-6 text-left fh5co-heading">
+								<!--<h2 id="pro_name" style="margin-bottom: 0px;">滑轨1</h2>-->
+								<div class="role">
+									<ul class="product-detail">
+										<li><span>名称：</span><span id="pro_name">{{product.name}}</span></li>
+										<li><span>产地：</span><span id="pro_place">{{product.place}}</span></li>
+										<li><span>型号：</span><span id="pro_code">{{product.code}}</span></li>
+										<li><span>大小：</span><span id="pro_size">{{product.size}}</span></li>
+										<li><span>描述：</span><span id="pro_desc">{{product.detail}}</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div ng-repeat="item in product.descs" on-finish-render-filters>
+								<p class="animate-box"><img id="pro_pic1" ng-src="{{item.image}}" class="img-responsive"></p>
+
+								<div class="testimony animate-box">
+									<blockquote>
+										<p id="pro_detail1">{{item.desc}}</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+		</div>
+
+	</div>
+

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="lib/swiper/dist/amazeui.swiper.min.css"/>
 
-    <link rel="stylesheet" href="css/css.css">
+    <!--<link rel="stylesheet" href="css/css.css">-->
 
     <style>
         .swiper-container {
@@ -83,8 +83,23 @@
     <![endif]-->
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-cookies.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller/indexCtrl.js"></script>
+    <script src="js/controller/mainCtrl.js"></script>
+    <script src="js/controller/aboutCtrl.js"></script>
+    <script src="js/controller/contactCtrl.js"></script>
+    <script src="js/controller/newsCtrl.js"></script>
+    <script src="js/controller/productsCtrl.js"></script>
+    <script src="js/controller/productDetailCtrl.js"></script>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2I50O4Hy1VwIpQGI4Iujn1sd"></script>
+
 </head>
-<body>
+<body ng-controller="indexCtrl">
 
 <div class="fh5co-loader"></div>
 
@@ -96,16 +111,16 @@
             </div>
             <div class="fh5co-top-menu menu-1 text-center">
                 <ul>
-                    <li><a href="index.html">网站首页</a></li>
+                    <li><a ng-href="index.html">网站首页</a></li>
                     <!--<li class="has-dropdown">-->
                     <li>
-                        <a href="product.html">产品展示</a>
+                        <a ng-href="#/products">产品展示</a>
                         <!--<ul class="dropdown">-->
                         <!--<li><a href="#">滑轨</a></li>-->
                         <!--</ul>-->
                     </li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a ng-href="#/about">关于我们</a></li>
+                    <li><a ng-href="#/contact">联系我们</a></li>
                 </ul>
             </div>
             <div class="fh5co-top-social menu-1 text-right">
@@ -116,250 +131,7 @@
         </div>
     </nav>
 
-    <div id="fh5co-work" style="padding-top: 2em;">
-        <div class="container">
-
-            <div class="swiper-container demo" id="my-swipper" style="margin-bottom: 50px;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="portfolio_detail.html?id=1"><img src="assets/img/portfolio/work3.jpg"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="portfolio_detail.html?id=2"><img src="assets/img/portfolio/work4.jpg"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="portfolio_detail.html?id=3"><img src="assets/img/portfolio/work6.jpg"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="portfolio_detail.html?id=4"><img src="assets/img/portfolio/work12.jpg"></a>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <div class="row">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div style="height: 56px;">
-                            <div class="custom-image-navbar">
-                                <img src="images/s1.png">
-                            </div>
-                            <div class="bt01" style="padding-left: 0px">
-                                <div class="span1"><a href="" style="padding-top: 13px;">最热产品</a></div>
-                                <div class="span2">Hot Products</div>
-                            </div>
-                        </div>
-                        <div>
-
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-1.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Folding Light</h3>
-                                                <span class="cat">Branding</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-2.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Power Led Light</h3>
-                                                <span class="cat">Illustration</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-3.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Elephant Origami</h3>
-                                                <span class="cat">Logo</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-4.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Electric Kick Scooter</h3>
-                                                <span class="cat">Web Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-5.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Shark Diver</h3>
-                                                <span class="cat">Branding</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-6.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Objekte Unserer Tage Berlin</h3>
-                                                <span class="cat">Logo</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-7.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Aloha Shirt</h3>
-                                                <span class="cat">Web Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-8.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Olafur Elliasson Waterfall Versailles</h3>
-                                                <span class="cat">Branding</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4 text-center animate-box">
-                                <a class="work" href="portfolio_detail.html">
-                                    <div class="work-grid" style="background-image:url(images/project-9.jpg);">
-                                        <div class="inner">
-                                            <div class="desc">
-                                                <h3>Hand Care</h3>
-                                                <span class="cat">Logo</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-
-                <div class="cont2nr col-md-12">
-                    <!--<div class="cont2nrbt">-->
-                    <!--</div>-->
-                    <div class="cont2nrtit">
-                        <div class="cont2nrtit1 col-md-4" style="padding: 0px;">
-                            <div class="cont2nrbt1" style="background-color: #ccc; width: 100%;"><a href="about.html">关于我们</a></div>
-                            <div class="bt">洛阳哥林多有限公司</div>
-                            <div class="gsimg"></div>
-                            <div class="gsnr"> 洛阳哥林多有限公司位于世界文化遗产——洛阳龙门石窟东13公里的李村镇工业区，距世界佛教圣地白马寺10公里，千年古刹…[<a
-                                    href="about.aspx?id=522">详情</a>]
-                            </div>
-                        </div>
-                        <div class="cont2nrtit2 col-md-4" style="padding: 0px;">
-                            <div class="cont2nrbt2 col-md-4" style="background-color: #868686; width: 100%;"><a href="">新闻中心</a></div>
-                            <ul>
-                                <li><a href="news.html" title="洛阳办公机俱小活动柜">洛阳办公机俱小活动柜</a><span class="date">16-05-29</span></li>
-                                <li><a href="news.html" title="密集架的保养">密集架的保养</a><span
-                                        class="date">16-09-10</span></li>
-                                <li><a href="news.html" title="五门更衣柜的保养">五门更衣柜的保养</a><span class="date">16-09-09</span>
-                                </li>
-                                <li><a href="news.html" title="文件柜的材质">文件柜的材质</a><span
-                                        class="date">16-09-08</span></li>
-                                <li><a href="news.html" title="50斗">50斗</a><span
-                                        class="date">16-09-07</span></li>
-                                <li><a href="news.html" title="文件柜的材质">文件柜的材质</a><span
-                                        class="date">16-09-08</span></li>
-                            </ul>
-
-                        </div>
-                        <div class="cont2nrtit3 col-md-4" style="padding: 0px;">
-                            <div class="cont2nrbt1 col-md-4" style="background-color: #ccc; width: 100%;"><a href="">家具百科</a></div>
-                            <ul>
-                                <li><a href="news.html" title="洛阳保险柜密码怎么改">洛阳保险柜密码怎么改</a><span class="date">16-05-23</span>
-                                </li>
-                                <li><a href="news.html" title="如何解决保险柜的常见故障">如何解决保险柜的常见故障</a><span
-                                        class="date">16-01-04</span></li>
-                                <li><a href="news.html" title="钢制更衣柜的清洁与保养技巧">钢制更衣柜的清洁与保养技巧</a><span
-                                        class="date">15-10-30</span></li>
-                                <li><a href="news.html" title="遇到钢制文件柜使用故障该怎么办？">遇到钢制文件柜使用故障该怎么办？…</a><span
-                                        class="date">15-10-10</span></li>
-                                <li><a href="news.html" title="巧用家具装扮小户型">巧用家具装扮小户型</a><span class="date">15-06-14</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </div>
-
-    <!--<div id="fh5co-author" class="fh5co-bg-section">-->
-    <!--<div class="container">-->
-    <!--<div class="row animate-box">-->
-    <!--<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">-->
-    <!--<h2>A little about me</h2>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-8 col-md-offset-2">-->
-    <!--<div class="author">-->
-    <!--<div class="author-inner animate-box" style="background-image: url(images/person3.jpg);">-->
-    <!--</div>-->
-    <!--<div class="desc animate-box">-->
-    <!--<span>Web Designer &amp; Developer</span>-->
-    <!--<h3>Mike Airways</h3>-->
-    <!--<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,-->
-    <!--there live the blind texts. Separated they live in Bookmarksgrove right at the coast of-->
-    <!--the Semantics, a large language ocean.</p>-->
-    <!--<p><a href="about.html" class="btn btn-primary btn-outline">Learn More</a></p>-->
-    <!--<ul class="fh5co-social-icons">-->
-    <!--<li><a href="#"><i class="icon-facebook"></i></a></li>-->
-    <!--<li><a href="#"><i class="icon-twitter"></i></a></li>-->
-    <!--<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
-    <!--<li><a href="#"><i class="icon-github"></i></a></li>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div id="fh5co-started">-->
-    <!--<div class="container">-->
-    <!--<div class="row animate-box">-->
-    <!--<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">-->
-    <!--<h2>Get Started</h2>-->
-    <!--<p>We create beautiful themes for your site behind the word mountains, far from the countries-->
-    <!--Vokalia and Consonantia, there live the blind texts.</p>-->
-    <!--<p><a href="#" class="btn btn-primary">Let's work together</a></p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div ng-view></div>
 
     <footer id="fh5co-footer" role="contentinfo">
         <div class="container">
@@ -404,13 +176,7 @@
 <script src="js/main.js"></script>
 
 <script type="text/javascript">
-    $('#my-swipper').swiper({
-        pagination: '#my-swipper .swiper-pagination',
-        paginationClickable: true,
-        spaceBetween: 30,
-        autoplay: 5000,
-        grabCursor: true
-    });
+
     function goDetail(i) {
         debugger
         window.location.href = "portfolio_detail.html?id=" + i;
