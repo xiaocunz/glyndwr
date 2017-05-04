@@ -215,4 +215,12 @@ app.controller('indexCtrl', ['$scope', '$rootScope', '$cookies', function($scope
         });
     };
 
+    $rootScope.$on('$stateChangeSuccess', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+
+    $(document).ready(function(){
+        $scope.burgerMenu();
+    });
+
 }]);

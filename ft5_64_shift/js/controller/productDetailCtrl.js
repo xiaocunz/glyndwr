@@ -16,7 +16,6 @@ app.controller('productDetailCtrl', ['$scope', '$location', function($scope, $lo
         $(document).ready(function(){
             $scope.mobileMenuOutsideClick();
             $scope.offcanvasMenu();
-            $scope.burgerMenu();
             $scope.contentWayPoint();
             $scope.dropdown();
             $scope.goToTop();
