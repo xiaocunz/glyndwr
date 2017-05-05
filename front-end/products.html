@@ -1,0 +1,211 @@
+<div>
+    <style>
+        .swiper-container {
+            height: 350px;
+            z-index: -1;
+            margin-bottom: 2em;
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+
+        .custom-swipper {
+            margin-bottom: 20px;
+            z-index: -1;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .product-name {
+            padding-top: 5px;
+        }
+        .cont1_left_cp {
+            height: auto !important;
+        }
+        .cont1_left_cptit {
+            height: auto !important;
+        }
+        .category a {
+            cursor: pointer;
+        }
+    </style>
+    <div class="fh5co-loader"></div>
+
+    <div id="page" style="padding-top: 0px !important;">
+
+        <div id="fh5co-work" style="padding-top: 2em;">
+            <div class="container">
+
+                <div class="row">
+                    <div class="cont1_left col-md-3" style="padding-left: 15px;">
+                        <div class="cont1_left_cp">
+                            <div class="custom-image-navbar" style="padding-left: 10px; padding-right: 5px; float: left;" >
+                                <img src="images/category.png" style="height: 30px; margin-top: 2px;">
+                            </div>
+                            <div class="cont1_left_cpbt">
+                                <a href="http://www.lyfubao.com/cplist.aspx?category_id=206">产品分类</a>
+                            </div>
+                            <div class="cont1_left_cptit">
+                                <div class="cpfl1">钢制柜办公家具</div>
+                                <div class="cpfltit category">
+                                    <div class="cpfl2 custom-list-style"><a onclick="selectCategory(1);">文件柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>保密柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>更衣柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>多斗柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>移门柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>底图柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>木纹柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>套色柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>精品柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>卡箱柜系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>期刊架系列</a>
+                                    </div>
+                                    <div class="cpfl2 custom-list-style"><a>不锈钢系列</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="lximg"><a ng-href="#/contact"><img
+                                src="./images/lximg.jpg"></a></div>
+                        <div class="lximg"><a ng-href="#/about"><img
+                                src="./images/lyimg.jpg"></a></div>
+                    </div>
+                    <div class="cont1_right col-md-9">
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-1.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Folding Light</h3>
+                                            <span class="cat">Branding</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-2.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Power Led Light</h3>
+                                            <span class="cat">Illustration</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-3.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Elephant Origami</h3>
+                                            <span class="cat">Logo</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-4.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Electric Kick Scooter</h3>
+                                            <span class="cat">Web Design</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-5.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Shark Diver</h3>
+                                            <span class="cat">Branding</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-6.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Objekte Unserer Tage Berlin</h3>
+                                            <span class="cat">Logo</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-7.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Aloha Shirt</h3>
+                                            <span class="cat">Web Design</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-8.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Olafur Elliasson Waterfall Versailles</h3>
+                                            <span class="cat">Branding</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 text-center animate-box">
+                            <a class="work" ng-href="#productDetail?id=1">
+                                <div class="work-grid" style="background-image:url(images/project-9.jpg);">
+                                    <div class="inner">
+                                        <div class="desc">
+                                            <h3>Hand Care</h3>
+                                            <span class="cat">Logo</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-name">滑轨</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

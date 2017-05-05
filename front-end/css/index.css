@@ -1,0 +1,30 @@
+.glyndor-head {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: white;
+    left: 0px;
+    right: 0px;
+}
+.left-logo {
+    display: inline-block;
+}
+.left-logo img {
+    height:100px;
+}
+.right-contact {
+    float: right;
+}
+.telephone-tip {
+    margin-top: 25px;
+    font-size: 17px;
+    color: #24211b;
+}
+.telephone {
+    font-size: 18px;
+    color: #ba1414;
+    font-family: Arial;
+    padding-left: 31px;
+    padding-top: 5px;
+}

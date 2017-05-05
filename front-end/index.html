@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>哥林多</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co"/>
+    <meta name="keywords"
+          content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive"/>
+    <meta name="author" content="FreeHTML5.co"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- font awesone -->
+    <link rel="stylesheet" href="fonts/">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="lib/swiper/dist/amazeui.swiper.min.css"/>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .swiper-container {
+            height: 450px;
+            margin-bottom: 2em;
+            z-index: 0;
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+
+        .custom-swipper {
+            margin-bottom: 20px;
+            z-index: -1;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .custom-image-navbar {
+            height: 40px;
+            margin-right: 5px;
+            margin-top: 7px;
+            float: left;
+            margin-left: 9px;
+        }
+
+        .swiper-slide a {
+            display: block;
+            width: inherit;
+            height: inherit;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-cookies.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller/indexCtrl.js"></script>
+    <script src="js/controller/mainCtrl.js"></script>
+    <script src="js/controller/aboutCtrl.js"></script>
+    <script src="js/controller/contactCtrl.js"></script>
+    <script src="js/controller/newsCtrl.js"></script>
+    <script src="js/controller/productsCtrl.js"></script>
+    <script src="js/controller/productDetailCtrl.js"></script>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2I50O4Hy1VwIpQGI4Iujn1sd"></script>
+
+</head>
+<body ng-controller="indexCtrl">
+
+<div class="fh5co-loader"></div>
+<div id="page" style="padding-top: 135px !important;">
+    <div class="glyndor-head">
+        <div class="container">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="left-logo">
+            <a ng-href="#/main">
+                <img src="images/gutai-logo.png">
+            </a>
+            </div>
+            <div class="right-contact">
+                <p class="telephone-tip">
+                    <img src="images/phone.png" style="width: 27px;">
+                    <span style="padding-top : 6px;">全国咨询热线：</span><br>
+                    <b class="telephone">18736000107</b>
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="fh5co-nav" style="top: 100px !important;" role="navigation">
+        <div class="container">
+            <!--<div class="fh5co-top-logo">-->
+                <!--<div id="fh5co-logo"><a ng-href="#/main">Glyndor</a></div>-->
+            <!--</div>-->
+            <div class="fh5co-top-menu menu-1 text-center">
+                <ul>
+                    <li><a ng-href="#/main">网站首页</a></li>
+                    <!--<li class="has-dropdown">-->
+                    <li>
+                        <a ng-href="#/products">产品展示</a>
+                        <!--<ul class="dropdown">-->
+                        <!--<li><a href="#">滑轨</a></li>-->
+                        <!--</ul>-->
+                    </li>
+                    <li><a ng-href="#/contact">最新动态</a></li>
+                    <li><a ng-href="#/about">关于我们</a></li>
+                    <li><a ng-href="#/contact">联系我们</a></li>
+                </ul>
+            </div>
+            <!--<div class="fh5co-top-social menu-1 text-right">-->
+                <!--<ul class="fh5co-social">-->
+                    <!--<li><i class="fa fa-phone" aria-hidden="true">&nbsp;13916725121</i></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </nav>
+
+    <div ng-view autoscroll></div>
+
+    <footer id="fh5co-footer" role="contentinfo">
+        <div class="container">
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+                        <small class="block">More Templates <a href="http://www.cssmoban.com/" target="_blank"
+                                                               title="模板之家">模板之家</a> - Collect from <a
+                                href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small>
+                    </p>
+
+                    <ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- swiper -->
+<script src="lib/swiper/dist/amazeui.swiper.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Main -->
+<!--<script src="js/main.js"></script>-->
+
+<script type="text/javascript">
+
+    function goDetail(i) {
+        debugger
+        window.location.href = "portfolio_detail.html?id=" + i;
+        window.alert("hello");
+    }
+//    wx.config({
+//        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+//        appId: '', // 必填，公众号的唯一标识
+//        timestamp: Date.parse(new Date()), // 必填，生成签名的时间戳
+//        nonceStr: '', // 必填，生成签名的随机串
+//        signature: '',// 必填，签名，见附录1
+//        jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+//    });
+//    wx.onMenuShareTimeline({
+//        title: '哥林多', // 分享标题
+//        link: '', // 分享链接
+//        imgUrl: '', // 分享图标
+//        success: function () {
+//            // 用户确认分享后执行的回调函数
+//        },
+//        cancel: function () {
+//            // 用户取消分享后执行的回调函数
+//        }
+//    });
+//    wx.onMenuShareAppMessage({
+//        title: '哥林多', // 分享标题
+//        desc: '', // 分享描述
+//        link: '', // 分享链接
+//        imgUrl: '', // 分享图标
+//        type: '', // 分享类型,music、video或link，不填默认为link
+//        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+//        success: function () {
+//            // 用户确认分享后执行的回调函数
+//        },
+//        cancel: function () {
+//            // 用户取消分享后执行的回调函数
+//        }
+//    });
+
+
+</script>
+
+</body>
+</html>
+
