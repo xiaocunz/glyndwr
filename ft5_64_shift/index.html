@@ -37,7 +37,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="lib/swiper/dist/amazeui.swiper.min.css"/>
 
-    <!--<link rel="stylesheet" href="css/css.css">-->
+    <link rel="stylesheet" href="css/index.css">
 
     <style>
         .swiper-container {
@@ -102,13 +102,22 @@
 <body ng-controller="indexCtrl">
 
 <div class="fh5co-loader"></div>
-
 <div id="page">
-    <nav class="fh5co-nav" role="navigation">
+    <div class="glyndor-head">
+        <div class="left-logo">
+            <a ng-href="#/main">
+                <img src="images/gutai-logo.png">
+            </a>
+        </div>
+        <div class="right-contact">
+            <p class="telephone">全国咨询热线：<b>18736000107</b><span>让世界爱上中国造</span></p>
+        </div>
+    </div>
+    <nav class="fh5co-nav" style="top: 120px !important;" role="navigation">
         <div class="container">
-            <div class="fh5co-top-logo">
-                <div id="fh5co-logo"><a ng-href="#/main">Glyndor</a></div>
-            </div>
+            <!--<div class="fh5co-top-logo">-->
+                <!--<div id="fh5co-logo"><a ng-href="#/main">Glyndor</a></div>-->
+            <!--</div>-->
             <div class="fh5co-top-menu menu-1 text-center">
                 <ul>
                     <li><a ng-href="#/main">网站首页</a></li>
@@ -123,11 +132,11 @@
                     <li><a ng-href="#/contact">联系我们</a></li>
                 </ul>
             </div>
-            <div class="fh5co-top-social menu-1 text-right">
-                <ul class="fh5co-social">
-                    <li><i class="fa fa-phone" aria-hidden="true">&nbsp;13916725121</i></li>
-                </ul>
-            </div>
+            <!--<div class="fh5co-top-social menu-1 text-right">-->
+                <!--<ul class="fh5co-social">-->
+                    <!--<li><i class="fa fa-phone" aria-hidden="true">&nbsp;13916725121</i></li>-->
+                <!--</ul>-->
+            <!--</div>-->
         </div>
     </nav>
 
